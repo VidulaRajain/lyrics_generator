@@ -16,7 +16,7 @@ if generate:
     with st.spinner('Generating Lyrics for your song....'):
         rest_of_the_song = LyricsGenerator().run(
             key=st.secrets['OPENAI_API_KEY'], 
-            input_lyrics=song_input, 
+            input_lyrics=song_input.strip(), 
             input_verse=part)
 
     st.text(rest_of_the_song)
