@@ -12,14 +12,16 @@ part  = st.radio('Chose which part of the song the input represents:', ['Verse 1
 
 generate = st.button('Generate Lyrics')
 
-if generate:
-    with st.spinner('Generating Lyrics for your song....'):
-        rest_of_the_song = LyricsGenerator().run(
-            key=st.secrets['OPENAI_API_KEY'], 
-            input_lyrics=song_input.strip(), 
-            input_verse=part)
+# if generate:
+#     with st.spinner('Generating Lyrics for your song....'):
+#         rest_of_the_song = LyricsGenerator().run(
+#             key=st.secrets['OPENAI_API_KEY'], 
+#             input_lyrics=song_input.strip(), 
+#             input_verse=part)
 
-    st.text(rest_of_the_song)
+#     st.text(rest_of_the_song)
+
+st.error('Sorry, API usage has been exhausted.')
 
 
 
