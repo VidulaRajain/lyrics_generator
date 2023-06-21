@@ -21,7 +21,7 @@ generate = st.button('Generate Lyrics')
 
 #     st.text(rest_of_the_song)
 
-st.error('Sorry, API usage has been exhausted.')
+st.error('Sorry, API usage limit has been exhausted.')
 
 
 
